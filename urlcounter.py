@@ -21,14 +21,14 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'p8jIyjKbnjdhbej4k4jojar9eitmngkapr9gu'
 
 # Celery configuration
-app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
+app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'  # local
 app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
+
+# app.config['CELERY_BROKER_URL'] = 'redis://:password@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
+# app.config['CELERY_RESULT_BACKEND'] = 'redis://:password@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
+
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 celery.conf.update(app.config)
-
-# Celery configuration
-app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
-app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
 uri = "mongodb+srv://make_it_eazy:109hkjh6bh23ioeqwrHiTqbi@cluster0-amwcq.mongodb.net/test?retryWrites=true"
 client = MongoClient(uri)
@@ -161,4 +161,5 @@ def taskstatus(task_id):
 
 # start main
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run()
