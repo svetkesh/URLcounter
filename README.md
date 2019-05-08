@@ -6,20 +6,20 @@ This project deals with **Celery** Tasks linked with frontend manipulations and 
 As user enter some URL and click "Submit" button **AJAX** sends a command to the **Flask** route to start task 
 with given address as parameter.
 
-Page recieve unique address for status update from queue.
+Page recieve unique address for task status update.
 
-Queue filled with **JSON** data from task with status and final result.
+Queue filled with **JSON** from task with status and result.
 
-With results (countes HTML tag on the page) recived by page **JavaScript** builds nice chart for found tags.
+With results (counted HTML tags on the page) recived by page **JavaScript** builds nice chart for tags.
 
 ![](https://github.com/svetkesh/URLcounter/blob/master/screenshots/Screenshot%20at%202019-05-08%2000-44-37.png)
 
-Some portion of data stored into remote **MongoDB** instance (shard):
+Some portion of data stored remotely in **MongoDB** instance (shard):
 
 ![](https://github.com/svetkesh/URLcounter/blob/master/screenshots/Screenshot%20at%202019-05-08%2001-59-56.png)
 
 Here I select permisive option to deal with errors.
-While input field only accept url-like strings, backend deal wrong addresses more palietly with humble yellow bar shown at the end.  
+While input field only accept url-like strings, backend deal wrong addresses more gently with humble yellow bar shown at the end.  
 
 ![](https://github.com/svetkesh/URLcounter/blob/master/screenshots/Screenshot%20at%202019-05-08%2002-03-43.png)
 
