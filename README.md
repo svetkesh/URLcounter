@@ -4,7 +4,7 @@
 This project deals with **Celery** Tasks linked with frontend manipulations and web pages retrieving and parsing.
 
 As user enter some URL and click "Submit" button **AJAX** sends a command to the **Flask** route to start task 
-with given assress as parameter.
+with given address as parameter.
 
 Page recieve unique address for status update from queue.
 
