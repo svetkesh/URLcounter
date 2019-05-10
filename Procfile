@@ -1,2 +1,2 @@
-web: python urlcounter.py -p $PORT
+web: gunicorn urlcounter:app
 worker: celery worker -A urlcounter.celery --beat --loglevel=info
