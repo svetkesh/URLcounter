@@ -24,11 +24,11 @@ app.config['SECRET_KEY'] = 'p8jIyjKbnjdhbej4k4jojar9eitmngkapr9gu'
 # app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'  # local
 # app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
-# app.config['CELERY_BROKER_URL'] = 'redis://:password@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
-# app.config['CELERY_RESULT_BACKEND'] = 'redis://:password@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
+app.config['CELERY_BROKER_URL'] = 'redis://:q0rdy2ZJW00ZVhIRSp5SR9SCzf98gWBn@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
+app.config['CELERY_RESULT_BACKEND'] = 'redis://:q0rdy2ZJW00ZVhIRSp5SR9SCzf98gWBn@redis-12785.c135.eu-central-1-1.ec2.cloud.redislabs.com:12785/0'
 
-app.config['CELERY_BROKER_URL'] = 'redis://h:pf92a199bdf5dcb0810e44a36a47e8341b78f3d95b5081db961d2c4571ce658dd@ec2-52-209-84-212.eu-west-1.compute.amazonaws.com:22609/0'  # local
-app.config['CELERY_RESULT_BACKEND'] = 'redis://h:pf92a199bdf5dcb0810e44a36a47e8341b78f3d95b5081db961d2c4571ce658dd@ec2-52-209-84-212.eu-west-1.compute.amazonaws.com:22609/0'
+# app.config['CELERY_BROKER_URL'] = 'redis://h:pf92a199bdf5dcb0810e44a36a47e8341b78f3d95b5081db961d2c4571ce658dd@ec2-52-209-84-212.eu-west-1.compute.amazonaws.com:22609/0'  # local
+# app.config['CELERY_RESULT_BACKEND'] = 'redis://h:pf92a199bdf5dcb0810e44a36a47e8341b78f3d95b5081db961d2c4571ce658dd@ec2-52-209-84-212.eu-west-1.compute.amazonaws.com:22609/0'
 
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
