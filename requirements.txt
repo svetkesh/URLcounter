@@ -1,7 +1,7 @@
 Flask==1.0.2
 pymongo==3.7.0
 dnspython==1.15.0
-Celery==4.3.0
+Celery==4.1.1
 kombu==4.2.0
 redis==3.2.1
 beautifulsoup4
